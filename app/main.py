@@ -4,7 +4,7 @@ import random
 import matplotlib.pyplot as plt
 
 
-def flip_coin():
+def flip_coin() -> dict:
     numbers = {x: 0 for x in range(11)}
     flip = ["orel", "reshka"]
 
@@ -18,12 +18,13 @@ def flip_coin():
 
     return numbers
 
+
 flip = flip_coin()
 
-x = list(flip.keys())
-y = list(flip.values())
+x_coordinate = list(flip.keys())
+y_coordinate = list(flip.values())
 
-plt.plot(x, y)
+plt.plot(x_coordinate, y_coordinate)
 plt.xlabel("Number of series")
 plt.ylabel("Number of drop percentage")
 plt.show()
